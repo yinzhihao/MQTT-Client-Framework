@@ -1,5 +1,5 @@
 Pod::Spec.new do |mqttc|
-	mqttc.name         = "MQTTClient"
+	mqttc.name         = "YZHMQTTClient"
 	mqttc.version      = "0.15.4"
 	mqttc.summary      = "iOS, macOS and tvOS native ObjectiveC MQTT Client Framework"
 	mqttc.homepage     = "https://github.com/yinzhihao/MQTT-Client-Framework"
@@ -19,13 +19,13 @@ Pod::Spec.new do |mqttc|
 	mqttc.default_subspec = 'CoreL'
 
 	mqttc.subspec 'Core' do |core|
-		core.dependency 'MQTTClient/Min'
-		core.dependency 'MQTTClient/Manager'
+		core.dependency 'YZHMQTTClient/Min'
+		core.dependency 'YZHMQTTClient/Manager'
 	end
   
-  mqttc.subspec 'CoreL' do |core|
-    core.dependency 'MQTTClient/MinL'
-    core.dependency 'MQTTClient/ManagerL'
+  mqttc.subspec 'CoreL' do |corel|
+    corel.dependency 'YZHMQTTClient/MinL'
+    corel.dependency 'YZHMQTTClient/ManagerL'
   end
 
 	mqttc.subspec 'Min' do |min|
@@ -83,21 +83,21 @@ Pod::Spec.new do |mqttc|
 		manager.source_files =	"MQTTClient/MQTTClient/MQTTSessionManager.{h,m}", 
 					"MQTTClient/MQTTClient/ReconnectTimer.{h,m}",
 					"MQTTClient/MQTTClient/ForegroundReconnection.{h,m}"
-		manager.dependency 'MQTTClient/Min'
+		manager.dependency 'YZHMQTTClient/Min'
 	end
 
 	mqttc.subspec 'ManagerL' do |managerl|
 		managerl.source_files =	"MQTTClient/MQTTClient/MQTTSessionManager.{h,m}", 
 					"MQTTClient/MQTTClient/ReconnectTimer.{h,m}", 
 					"MQTTClient/MQTTClient/ForegroundReconnection.{h,m}"
-		managerl.dependency 'MQTTClient/MinL'
+		managerl.dependency 'YZHMQTTClient/MinL'
 		managerl.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'LUMBERJACK=1' }
 	end
 
 	mqttc.subspec 'Websocket' do |ws|
 		ws.source_files = "MQTTClient/MQTTClient/MQTTWebsocketTransport/*.{h,m}"
 		ws.dependency 'SocketRocket'
-		ws.dependency 'MQTTClient/Min'
+		ws.dependency 'YZHMQTTClient/Min'
 		ws.requires_arc = true
 		ws.libraries = "icucore"
 	end
@@ -105,7 +105,7 @@ Pod::Spec.new do |mqttc|
 	mqttc.subspec 'WebsocketL' do |wsl|
 		wsl.source_files = "MQTTClient/MQTTClient/MQTTWebsocketTransport/*.{h,m}"
 		wsl.dependency 'SocketRocket'
-		wsl.dependency 'MQTTClient/MinL'
+		wsl.dependency 'YZHMQTTClient/MinL'
 		wsl.requires_arc = true
 		wsl.libraries = "icucore"
 		wsl.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'LUMBERJACK=1' }

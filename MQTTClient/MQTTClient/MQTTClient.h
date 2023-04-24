@@ -15,23 +15,23 @@
 
 #import <Foundation/Foundation.h>
 
-#import <MQTTClient/MQTTSession.h>
-#import <MQTTClient/MQTTDecoder.h>
-#import <MQTTClient/MQTTSessionLegacy.h>
-#import <MQTTClient/MQTTProperties.h>
-#import <MQTTClient/MQTTMessage.h>
-#import <MQTTClient/MQTTTransport.h>
-#import <MQTTClient/MQTTCFSocketTransport.h>
-#import <MQTTClient/MQTTCoreDataPersistence.h>
-#import <MQTTClient/MQTTSSLSecurityPolicyTransport.h>
-#import <MQTTClient/MQTTLog.h>
+#import <YZHMQTTClient/MQTTSession.h>
+#import <YZHMQTTClient/MQTTDecoder.h>
+#import <YZHMQTTClient/MQTTSessionLegacy.h>
+#import <YZHMQTTClient/MQTTProperties.h>
+#import <YZHMQTTClient/MQTTMessage.h>
+#import <YZHMQTTClient/MQTTTransport.h>
+#import <YZHMQTTClient/MQTTCFSocketTransport.h>
+#import <YZHMQTTClient/MQTTCoreDataPersistence.h>
+#import <YZHMQTTClient/MQTTSSLSecurityPolicyTransport.h>
+#import <YZHMQTTClient/MQTTLog.h>
 
 #if __has_include(<MQTTClient/MQTTSessionManager.h>)
-#import <MQTTClient/MQTTSessionManager.h>
+#import <YZHMQTTClient/MQTTSessionManager.h>
 #endif
 
 #if __has_include(<MQTTClient/MQTTWebsocketTransport.h>)
-#import <MQTTClient/MQTTWebsocketTransport.h>
+#import <YZHMQTTClient/MQTTWebsocketTransport.h>
 #endif
 
 //! Project version number for MQTTClient.
