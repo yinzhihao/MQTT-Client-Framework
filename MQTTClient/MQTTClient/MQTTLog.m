@@ -10,18 +10,18 @@
 
 @implementation MQTTLog
 
-#ifdef DEBUG
-
-DDLogLevel ddLogLevel = DDLogLevelVerbose;
-
-#else
-
-DDLogLevel ddLogLevel = DDLogLevelWarning;
-
-#endif
-
-+ (void)setLogLevel:(DDLogLevel)logLevel {
-    ddLogLevel = logLevel;
-}
+//#ifdef DEBUG
+//
+//DDLogLevel ddLogLevel = DDLogLevelVerbose;
+//
+//#else
+//
+//DDLogLevel ddLogLevel = DDLogLevelWarning;
+//
+//#endif
+//
+//+ (void)setLogLevel:(DDLogLevel)logLevel {
+//    ddLogLevel = logLevel;
+//}
 
 @end

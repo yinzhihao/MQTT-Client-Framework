@@ -1,13 +1,13 @@
 Pod::Spec.new do |mqttc|
 	mqttc.name         = "MQTTClient"
-	mqttc.version      = "0.15.3"
+	mqttc.version      = "0.15.4"
 	mqttc.summary      = "iOS, macOS and tvOS native ObjectiveC MQTT Client Framework"
-	mqttc.homepage     = "https://github.com/novastone-media/MQTT-Client-Framework"
+	mqttc.homepage     = "https://github.com/yinzhihao/MQTT-Client-Framework"
 	mqttc.license      = { :type => "EPLv1", :file => "LICENSE" }
 	mqttc.author       = { "novastonemedia" => "ios@novastonemedia.com" }
 	mqttc.source       = {
-		:git => "https://github.com/novastone-media/MQTT-Client-Framework.git",
-		:tag => "0.15.2",
+		:git => "https://github.com/yinzhihao/MQTT-Client-Framework.git",
+		:tag => mqttc.version.to_s,
 		:submodules => true
 	}
 
@@ -16,12 +16,17 @@ Pod::Spec.new do |mqttc|
 	mqttc.ios.deployment_target = "6.1"
 	mqttc.osx.deployment_target = "10.10"
 	mqttc.tvos.deployment_target = "9.0"
-	mqttc.default_subspec = 'Core'
+	mqttc.default_subspec = 'CoreL'
 
 	mqttc.subspec 'Core' do |core|
 		core.dependency 'MQTTClient/Min'
 		core.dependency 'MQTTClient/Manager'
 	end
+  
+  mqttc.subspec 'CoreL' do |core|
+    core.dependency 'MQTTClient/MinL'
+    core.dependency 'MQTTClient/ManagerL'
+  end
 
 	mqttc.subspec 'Min' do |min|
 		min.source_files =	"MQTTClient/MQTTClient/MQTTCFSocketDecoder.{h,m}",
