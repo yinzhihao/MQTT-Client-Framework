@@ -96,7 +96,7 @@ Pod::Spec.new do |mqttc|
 
 	mqttc.subspec 'Websocket' do |ws|
 		ws.source_files = "MQTTClient/MQTTClient/MQTTWebsocketTransport/*.{h,m}"
-		ws.dependency 'SocketRocket'
+		ws.dependency 'SocketRocket', '0.5.1'
 		ws.dependency 'YZHMQTTClient/Min'
 		ws.requires_arc = true
 		ws.libraries = "icucore"
@@ -104,7 +104,7 @@ Pod::Spec.new do |mqttc|
 
 	mqttc.subspec 'WebsocketL' do |wsl|
 		wsl.source_files = "MQTTClient/MQTTClient/MQTTWebsocketTransport/*.{h,m}"
-		wsl.dependency 'SocketRocket'
+		wsl.dependency 'SocketRocket', '0.5.1'
 		wsl.dependency 'YZHMQTTClient/MinL'
 		wsl.requires_arc = true
 		wsl.libraries = "icucore"
